@@ -9,7 +9,9 @@ const RECIPE_URLS = [
     'https://adarsh249.github.io/Lab8-Starter/recipes/5_healthy-thanksgiving-recipe-crockpot-turkey-breast.json',
     'https://adarsh249.github.io/Lab8-Starter/recipes/6_one-pot-thanksgiving-dinner.json',
 ];
-
+localStorage.clear();
+//make sure functions are propertly working, 
+//rather than grabbing from local storage
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
 //init function is run when page is loaded.
@@ -81,9 +83,9 @@ async function getRecipes() {
   // A1. TODO - Check local storage to see if there are any recipes.
   //            If there are recipes, return them.
   let recipes = localStorage.getItem('recipes');
-  // if(recipes != null){
-  //   return recipes;
-  // }
+   if(recipes != null){
+     return recipes;
+   }
   /**************************/
   // The rest of this method will be concerned with requesting the recipes
   // from the network
