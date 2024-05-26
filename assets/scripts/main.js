@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', init);
 //init function is run when page is loaded.
 // Starts the program, all function calls trace back here
 async function init() {
-  localStorage.clear();
+  // localStorage.clear();
   //make sure functions are propertly working, 
   //rather than grabbing from local storage
   // initialize ServiceWorker
@@ -158,6 +158,7 @@ function saveRecipesToStorage(recipes) {
  */
 function addRecipesToDocument(recipes) {
   if (!recipes) return;
+  //console.log(typeOf(recipes));
   let main = document.querySelector('main');
   recipes.forEach((recipe) => {
     let recipeCard = document.createElement('recipe-card');
