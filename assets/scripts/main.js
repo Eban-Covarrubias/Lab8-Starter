@@ -81,9 +81,9 @@ async function getRecipes() {
   // A1. TODO - Check local storage to see if there are any recipes.
   //            If there are recipes, return them.
   let recipes = localStorage.getItem('recipes');
-  if(recipes != null){
-    return recipes;
-  }
+  // if(recipes != null){
+  //   return recipes;
+  // }
   /**************************/
   // The rest of this method will be concerned with requesting the recipes
   // from the network
